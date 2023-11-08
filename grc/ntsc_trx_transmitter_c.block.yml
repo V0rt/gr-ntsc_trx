@@ -1,0 +1,15 @@
+id: ntsc_trx_transmitter_c
+label: transmitter c
+category: '[Ntsc_trx]'
+templates:
+  imports: from gnuradio import ntsc_trx
+  make: ntsc_trx.transmitter_c(${samp_rate})
+parameters:
+- id: samp_rate
+  label: Samp_rate
+  dtype: float
+outputs:
+- label: out
+  domain: stream
+  dtype: float
+file_format: 1

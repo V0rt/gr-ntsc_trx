@@ -1,0 +1,23 @@
+id: ntsc_trx_video_stream_converter_c
+label: video stream converter c
+category: '[Ntsc_trx]'
+templates:
+  imports: from gnuradio import ntsc_trx
+  make: ntsc_trx.video_stream_converter_c(${samp_rate}, ${decimation_factor})
+parameters:
+- id: samp_rate
+  label: Samp_rate
+  dtype: float
+- id: decimation_factor
+  label: Decimation_factor
+  dtype: float
+inputs:
+- label: in
+  domain: stream
+  dtype: float
+  multiplicity: '4'
+outputs:
+- label: out
+  domain: stream
+  dtype: short
+file_format: 1
